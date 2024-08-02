@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion-fibonacci</title>
+</head>
+<body>
+    <h1>recursion-fibonaci series</h1>
+    <input type="text" name="" id="in1" placeholder=" enter the numper :from">
+    <input type="text" name="" id="in2"placeholder=" enter the numper :to">
+    <button onclick="send()">send</button>
+    <h3 id="show"></h3>
+    <script>
+     function   send(){
+        var in1=document.getElementById("in1")
+        var a=Number(in1.value)
+        var in2=document.getElementById("in2")
+        var b=Number(in2.value)
+      
+         var  count=b;
+         var j=1
+         var ar=[a];
+            function recursion(){
+       
+             if(count!=0){
+              l=j+a;
+
+             ar.push(l);
+              j=a
+              a=l
+             count--;
+             recursion();
+            }
+          
+        }  
+
+        recursion()
+             
+
+        document.getElementById("show").innerHTML=ar.toString()
+
+    
+    }
+ 
+        
+
+    </script>
+
+    
+</body>
+</html>
